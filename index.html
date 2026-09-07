@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>a message for you</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    #password-screen {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: #141414;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+    .pass-card {
+      background: #181818;
+      padding: 30px;
+      border-radius: 8px;
+      border: 1px solid #282828;
+      text-align: center;
+      max-width: 300px;
+      width: 90%;
+    }
+    .pass-card h2 {
+      color: #fff;
+      font-size: 1.2rem;
+      margin-bottom: 15px;
+      text-transform: lowercase;
+    }
+    .pass-card input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 12px;
+      background: #2b2b2b;
+      border: 1px solid #404040;
+      border-radius: 4px;
+      color: #fff;
+      box-sizing: border-box;
+      text-align: center;
+    }
+    .pass-card button {
+      width: 100%;
+      padding: 10px;
+      background: #bb86fc;
+      border: none;
+      border-radius: 4px;
+      color: #000;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    #error-msg {
+      color: #ff5252;
+      font-size: 0.8rem;
+      margin-top: 10px;
+      text-transform: lowercase;
+    }
+
+    .playlist-section {
+      padding: 20px;
+      margin-bottom: 100px;
+    }
+    .track-card {
+      background: #181818;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 25px;
+      border: 1px solid #282828;
+    }
+    .track-header-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+    .track-title {
+      color: #bb86fc;
+      font-size: 0.85rem;
+      text-transform: lowercase;
+      letter-spacing: 1px;
+    }
+    .top-play-btn {
+      background: #bb86fc;
+      color: #000;
+      border: none;
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-weight: bold;
+      font-size: 0.8rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .track-headline {
+      color: #e0aaff;
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 12px;
+      line-height: 1.4;
+    }
+    .track-message {
+      color: #ccc;
+      font-size: 0.95rem;
+      line-height: 1.7;
+      margin-bottom: 5px;
+      white-space: pre-line;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- PASSWORD SCREEN -->
+  <div id="password-screen">
+    <div class="pass-card">
+      <h2>enter password</h2>
+      <input type="password" id="pass-input" placeholder="password..." onkeydown="if(event.key==='Enter') checkPassword()">
+      <button onclick="checkPassword()">unlock</button>
+      <p id="error-msg"></p>
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div id="main-content" style="display: none;">
+    <div class="navbar">
+      <div class="logo">ReiFlix</div>
+      <div class="profile-icon">R</div>
+    </div>
+
+    <div class="hero">
+      <p class="subhead">a message for you</p>
+      <h1>dear sabrina</h1>
+      <p class="body-text">some things i felt like i needed to say</p>
+    </div>
+
+    <!-- PLAYLIST MESSAGES -->
+    <div class="playlist-section">
+
+      <!-- PART 01 -->
+      <div class="track-card">
+        <div class="track-header-row">
+          <div class="track-title">part 01</div>
+          <button class="top-play-btn" onclick="playSong('dorothea', 'dorothea - taylor swift')">🤍 ▶</button>
+        </div>
+        <div class="track-headline">our friendship meant a lot to me.</div>
+        <p class="track-message">if anything, you were someone i really valued, and i cared about the friendship we had more than i probably knew how to show. i dont think i ever really told you just how much i appreciated having you in my life.
+
+and i miss it.
+
+i miss the little things, the random conversations, the stupid jokes, the moments that probably didnt mean much at the time but somehow became memories that i still think about. i miss how natural everything used to feel between us.
+
+i miss having you as my friend.
+
+and i think thats something ive always had a hard time admitting, because sometimes i act like im okay with things changing when deep down, i still look back at what we had and wonder how things couldve been different.
+
+you were someone i was genuinely grateful to have.
+
+and before anything else, i just want you to know that.</p>
+      </div>
+
+      <!-- PART 02 -->
+      <div class="track-card">
+        <div class="track-header-row">
+          <div class="track-title">part 02</div>
+          <button class="top-play-btn" onclick="playSong('exile', 'exile - taylor swift')">🤍 ▶</button>
+        </div>
+        <div class="track-headline">because somewhere along the way, things started changing.</div>
+        <p class="track-message">there were problems, misunderstandings, things left unsaid, and eventually, the distance between us became bigger than either of us probably intended it to be.
+
+i dont want to make this about who was right or who was wrong.
+
+i dont think our friendship broke because of one single thing. it was more like a bunch of little things slowly piling up until we didnt know how to get back to where we were.
+
+and eventually, we became two people who used to know each other so well, but somehow started feeling like strangers.
+
+that honestly hurt.
+
+because i never really wanted our friendship to end.
+
+i wasnt angry at you. i was just overwhelmed with so many things at once, and i didnt know how to handle all of it. there were so many weights on me that i didnt know how to put down, and instead of telling you that i was struggling, i started keeping everything to myself.
+
+i know that probably made things worse.
+
+i know distance can be confusing when the person creating it never explains why.
+
+and im sorry for that.</p>
+      </div>
+
+      <!-- PART 03 -->
+      <div class="track-card">
+        <div class="track-header-row">
+          <div class="track-title">part 03</div>
+          <button class="top-play-btn" onclick="playSong('august', 'august - taylor swift')">🤍 ▶</button>
+        </div>
+        <div class="track-headline">there's also something i never really knew how to tell you.</div>
+        <p class="track-message">i started liking you in august.
+
+and honestly, even writing that now feels weird because i spent so much time trying not to acknowledge it.
+
+i didnt know what to do with those feelings.
+
+at first, i thought maybe it was nothing. maybe i was just attached, maybe i was just grateful for you, maybe i was just confusing how much i valued our friendship with something else.
+
+but the more i tried to ignore it, the harder it became to pretend that i wasnt feeling anything.
+
+and i think thats when everything became complicated for me.
+
+because you werent just someone i liked.
+
+you were my friend.
+
+you were someone i genuinely cared about, someone who had already become important to me before i even understood what i was feeling.
+
+and thats what made it scary.
+
+i didnt want my feelings to ruin something that already meant so much to me.
+
+so instead of saying anything, i kept it to myself.
+
+i thought silence would make it disappear.
+
+it didnt.</p>
+      </div>
+
+      <!-- PART 04 -->
+      <div class="track-card">
+        <div class="track-header-row">
+          <div class="track-title">part 04</div>
+          <button class="top-play-btn" onclick="playSong('august', 'august - taylor swift')">🤍 ▶</button>
+        </div>
+        <div class="track-headline">i also want to clarify something, because i dont want you to look back at that version of me and think i had everything figured out.</div>
+        <p class="track-message">i didnt.
+
+i was confused.
+
+it was the first time i had really questioned myself and my own identity like that, and i genuinely didnt know what those feelings meant.
+
+i wasnt in the clearest state of mind either. i had a lot going on in my head, and i think i let myself get lost in things that i didnt know how to understand yet.
+
+i was basically just trying to figure myself out while also trying to act like i already knew who i was.
+
+and i think thats why i reacted the way i did.
+
+i actually avoided you because i was confused.
+
+i had to go away from you because i thought that if those feelings became bigger, i was gonna drag you down with me.
+
+i thought that creating distance would make things easier.
+
+i thought maybe if i stayed away long enough, everything would eventually go back to normal.
+
+but feelings arent really something you can just switch off.
+
+and i dont want you to think that i was avoiding you because i hated you, or because you did something that made me want to leave.
+
+it wasnt that.
+
+i was just trying to understand myself.
+
+and maybe i was a little stupid about the way i handled it.
+
+but i was trying.</p>
+      </div>
+
+      <!-- PART 05 -->
+      <div class="track-card">
+        <div class="track-header-row">
+          <div class="track-title">part 05</div>
+          <button class="top-play-btn" onclick="playSong('the1', 'the 1 - taylor swift')">🤍 ▶</button>
+        </div>
+        <div class="track-headline">looking back now, theres honestly a lot that i wish i did differently.</div>
+        <p class="track-message">i wish i didnt become so distant.
+
+i wish i communicated instead of disappearing into my own head.
+
+i wish i told you when something was bothering me instead of expecting myself to figure everything out alone.
+
+i wish i gave you the chance to understand what was happening instead of making the decision for both of us that distance was better.
+
+because maybe things wouldve still ended the same way.
+
+maybe they wouldnt have.
+
+i'll never really know.
+
+and thats probably one of the hardest parts.
+
+not knowing what couldve happened if i had just been honest sooner.
+
+sometimes i think about how different things might have been if i had simply talked to you instead of running away from everything i was feeling.
+
+but i cant change that anymore.
+
+i cant go back to that version of myself and tell him to stay, to talk, to stop being afraid.
+
+all i can do is understand why i did what i did and learn from it.
+
+and if theres one thing i learned from all of this, its that silence doesnt always protect people.
+
+sometimes silence just leaves people confused.
+
+and i wish i knew that sooner.</p>
+      </div>
+
+      <!-- PART 06 -->
+      <div class="track-card">
+        <div class="track-header-row">
+          <div class="track-title">part 06</div>
+          <button class="top-play-btn" onclick="playSong('nothingnew', 'nothing new - taylor swift')">🤍 ▶</button>
+        </div>
+        <div class="track-headline">so whatever happens after this, i dont really want to force anything.</div>
+        <p class="track-message">i dont know where we're supposed to go from here.
+
+maybe we'll eventually become friends again.
+
+maybe we'll stay as people who once meant a lot to each other.
+
+maybe life will take us in completely different directions.
+
+and honestly, i dont know.
+
+but whatever happens, i just wanted you to know the truth.
+
+you mattered to me.
+
+our friendship mattered to me.
+
+the memories mattered to me.
+
+and even the things that hurt mattered, because they were part of something that was real to me.
+
+i dont want to erase any of it just because it ended badly.
+
+some things dont have to last forever to have been important.
+
+some people dont have to stay in your life forever to have changed it.
+
+and maybe thats what you were to me.
+
+a person who came into my life, stayed through things i didnt think i could get through, became someone i valued more than i knew how to say, and eventually became someone i had to learn how to let go of.
+
+i'll always be grateful that you were there.
+
+thank you for staying when things were difficult.
+
+thank you for being beside me through the bullying and all the shit i was dealing with.
+
+thank you for being my friend.
+
+and im sorry for the times i made you feel like i didnt care, because i did.
+
+i just didnt know how to carry everything i was feeling at the time.
+
+i dont expect you to forget anything.
+
+i dont expect you to immediately understand.
+
+and i dont expect this message to magically fix what happened between us.
+
+i just didnt want our story to end with everything i never said still sitting inside my head.
+
+maybe this is closure.
+
+maybe its just me finally putting into words everything i shouldve said before.
+
+either way, im glad i got to know you.
+
+im glad i got to call you my friend.
+
+and if one day you look back at everything we had, i hope you dont only remember how it ended.
+
+i hope you remember that there was a time when our friendship was something i genuinely treasured.
+
+because it was.
+
+it really was.
+
+and no matter what happens from here,
+
+thank you for being part of my life.</p>
+      </div>
+
+    </div>
+
+    <!-- AUDIO PLAYER BAR -->
+    <div class="audio-player">
+      <div class="song-info">
+        <p class="episode" id="player-track">NOW PLAYING</p>
+        <p class="song-title" id="player-title">select a track above</p>
+      </div>
+      <button class="play-btn" onclick="toggleAudio()">▶</button>
+    </div>
+
+    <audio id="bg-music">
+      <source id="audio-source" src="" type="audio/mpeg">
+    </audio>
+  </div>
+
+  <script>
+    const songs = {
+      'dorothea': 'https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf07a.mp3',
+      'exile': 'https://cdn.pixabay.com/download/audio/2022/03/15/audio_c8c8a73467.mp3',
+      'august': 'https://cdn.pixabay.com/download/audio/2022/10/14/audio_9939f79220.mp3',
+      'the1': 'https://cdn.pixabay.com/download/audio/2022/11/06/audio_c1c1f20b33.mp3',
+      'nothingnew': 'https://cdn.pixabay.com/download/audio/2022/01/18/audio_d0a13f69d2.mp3'
+    };
+
+    function checkPassword() {
+      const pass = document.getElementById('pass-input').value.trim();
+      const passScreen = document.getElementById('password-screen');
+      const mainContent = document.getElementById('main-content');
+      const errorMsg = document.getElementById('error-msg');
+
+      if (pass.toLowerCase() === "august") {
+        passScreen.style.setProperty('display', 'none', 'important');
+        mainContent.style.setProperty('display', 'block', 'important');
+      } else {
+        errorMsg.innerText = "incorrect password, try again!";
+      }
+    }
+
+    function playSong(songKey, titleText) {
+      const audio = document.getElementById('bg-music');
+      const source = document.getElementById('audio-source');
+      const btn = document.querySelector('.play-btn');
+      
+      source.src = songs[songKey];
+      audio.load();
+      audio.play().catch(e => console.log(e));
+      
+      document.getElementById('player-title').innerText = titleText;
+      btn.innerText = "❚❚";
+    }
+
+    function toggleAudio() {
+      const audio = document.getElementById('bg-music');
+      const btn = document.querySelector('.play-btn');
+      if (audio.paused) {
+        audio.play();
+        btn.innerText = "❚❚";
+      } else {
+        audio.pause();
+        btn.innerText = "▶";
+      }
+    }
+  </script>
+</body>
+      </html>
+      
