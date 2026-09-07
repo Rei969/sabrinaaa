@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>things i felt like i needed to tell you :<</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background-color: #141414;
+      color: #e0e0e0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    #password-screen {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: #141414;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+    .pass-card {
+      background: #181818;
+      padding: 30px;
+      border-radius: 8px;
+      border: 1px solid #282828;
+      text-align: center;
+      max-width: 300px;
+      width: 90%;
+    }
+    .pass-card h2 {
+      color: #fff;
+      font-size: 1.2rem;
+      margin-bottom: 15px;
+      text-transform: lowercase;
+    }
+    .pass-card input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 12px;
+      background: #2b2b2b;
+      border: 1px solid #404040;
+      border-radius: 4px;
+      color: #fff;
+      box-sizing: border-box;
+      text-align: center;
+    }
+    .pass-card button {
+      width: 100%;
+      padding: 10px;
+      background: #bb86fc;
+      border: none;
+      border-radius: 4px;
+      color: #000;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    #error-msg {
+      color: #ff5252;
+      font-size: 0.8rem;
+      margin-top: 10px;
+      text-transform: lowercase;
+    }
+
+    /* SURPRISE START SCREEN */
+    #start-screen {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: #141414;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 8888;
+      text-align: center;
+      padding: 20px;
+    }
+    .start-btn {
+      background: #bb86fc;
+      color: #000;
+      border: none;
+      padding: 12px 28px;
+      border-radius: 30px;
+      font-weight: bold;
+      font-size: 1rem;
+      cursor: pointer;
+      margin-top: 20px;
+      box-shadow: 0 4px 15px rgba(187, 134, 252, 0.3);
+    }
+
+    /* MAIN CONTAINER */
+    .container {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 40px 20px 100px 20px;
+    }
+    .header-section {
+      text-align: left;
+      margin-bottom: 35px;
+      border-bottom: 1px solid #282828;
+      padding-bottom: 20px;
+    }
+    .names-row {
+      font-size: 0.85rem;
+      color: #bb86fc;
+      text-transform: lowercase;
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+    }
+    .main-title {
+      font-size: 1.5rem;
+      color: #fff;
+      font-weight: 600;
+      margin: 0;
+      text-transform: lowercase;
+    }
+    
+    .letter-body {
+      background: #181818;
+      border: 1px solid #282828;
+      border-radius: 8px;
+      padding: 30px;
+      line-height: 1.9;
+      color: #ccc;
+      font-size: 0.98rem;
+      white-space: pre-line;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- PASSWORD SCREEN -->
+  <div id="password-screen">
+    <div class="pass-card">
+      <h2>enter password</h2>
+      <input type="password" id="pass-input" placeholder="password..." onkeydown="if(event.key==='Enter') checkPassword()">
+      <button onclick="checkPassword()">unlock</button>
+      <p id="error-msg"></p>
+    </div>
+  </div>
+
+  <!-- SURPRISE START SCREEN -->
+  <div id="start-screen" style="display: none;">
+    <p style="color: #aaa; margin-bottom: 10px; text-transform: lowercase;">a message for you</p>
+    <h1 style="color: #fff; font-size: 1.6rem; text-transform: lowercase; margin: 0 0 10px 0;">things i felt like i needed to tell you :<</h1>
+    <button class="start-btn" onclick="startExperience()">tap to open 🤍</button>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div id="main-content" style="display: none;">
+    <div class="container">
+      
+      <div class="header-section">
+        <div class="names-row">rei baterbonia ➔ sabrina</div>
+        <h1 class="main-title">things i felt like i needed to tell you :<</h1>
+      </div>
+
+      <div class="letter-body">
+if there is one absolute truth i want you to know before anything else, it's that you were someone i genuinely valued and held so close to my heart. looking back, i cared about the bond we shared much deeper than i ever knew how to express or show back then. i don't think i ever really paused to tell you just how deeply i appreciated having you in my life—how having you around made even the heaviest days feel manageable and the normal days feel truly special.
+
+and the truth is, i miss it endlessly.
+
+i miss all the little things that defined us: the completely random, unfiltered late-night conversations, the stupid inside jokes that only the two of us got, and all those quiet, mundane moments that didn't seem like much at the time, but somehow grew to become the most cherished memories i hold onto today. i miss how natural, easy, and comforting everything felt between us before life got complicated.
+
+i miss having you as my friend.
+
+that is something i’ve always struggled to admit out loud, mostly because of my own pride and fear. i often put up a front, acting like i’m totally fine with how things turned out, as if i’m unaffected when people drift away. but deep down, away from everyone else, i still look back at what we had and wonder how things could have been different if i had just lowered my guard and spoken up sooner.
+
+you were someone i was truly, deeply grateful to cross paths with. and before we talk about anything else, i just needed you to know that.
+
+***
+
+there were problems, misunderstandings, and so many unsaid thoughts that slowly poisoned the air between us. eventually, the distance grew bigger, wider, and colder than either of us ever intended it to become.
+
+i don't want to use this letter to point fingers, assign blame, or dissect who was right or wrong. i don't believe our friendship collapsed because of a single explosive fight or one giant mistake. it was more like a series of tiny miscommunications, unexpressed anxieties, and quiet assumptions piling up over time, until we reached a point where neither of us knew how to find our way back to where we started.
+
+and eventually, we transformed into two people who used to know each other’s souls, but suddenly started acting like complete strangers when passing by.
+
+that shattered me far more than i ever let anyone see.
+
+because the truth is, i never wanted our friendship to end. i was never truly angry at you. i was just profoundly overwhelmed by everything crashing down in my personal life all at once. there were so many emotional weights on my shoulders that i had no idea how to carry, and instead of being vulnerable and telling you i was drowning, i made the mistake of retreating into my shell and keeping everything bottled up inside.
+
+i know that keeping quiet only made things a hundred times worse. i know how painful, confusing, and frustrating distance can be when the person pulling away leaves you with zero explanation.
+
+for making you feel discarded or left in the dark, i am deeply, truly sorry.
+
+***
+
+there's a chapter of this story i was always far too terrified to read out loud.
+
+i started liking you in august.
+
+and honestly, even typing those words out right now makes my heart race, because i spent so much time, energy, and mental effort convincing myself—and trying to convince the world—that it wasn't real.
+
+i genuinely had no idea what to do with those feelings when they first surfaced. at first, i tried to dismiss them immediately. i kept telling myself it was nothing: maybe i was just overly attached, maybe i was just immensely grateful for your kindness, or maybe i was just confusing deep friendship with romantic feelings.
+
+but the harder i fought it, and the deeper i tried to bury it, the clearer it became that i couldn't just logic my way out of what i was feeling whenever you were around.
+
+and that was the exact moment everything became so terrifyingly complicated for me.
+
+because you weren't just anyone. you were my friend. you were someone i genuinely cared about as a human being, someone who had become my safe harbor long before i even understood my own heart. and that’s what scared me to my core.
+
+i was terrified that if i confessed, or if things got weird, my feelings would destroy the one relationship that meant the entire world to me. i thought losing you as a friend was a price i couldn't survive paying.
+
+so instead of taking the risk, i chose silence. i convinced myself that if i stayed quiet long enough, the feelings would just fade away on their own.
+
+i was wrong. it didn't work that way at all.
+
+***
+
+i want to be completely transparent here, because i don't ever want you to look back at that version of me and think i was playing games or that i had everything under control.
+
+i had absolutely nothing figured out. i was completely lost in my own head.
+
+it was the very first time in my life that i had ever really questioned my emotions, my feelings, and my own identity in that way, and i genuinely didn't know how to process what it all meant. my mental state at the time was a chaotic mess. i was carrying so much internal noise, and i allowed myself to get consumed by heavy thoughts that i was simply too young and too immature to handle properly.
+
+i was basically just a confused kid trying to figure out who he was, while desperately putting on a mask to pretend to everyone else that he was totally fine and in control.
+
+and that is the real, unvarnished reason why i reacted the way i did.
+
+i didn't pull away because you did something wrong. i actually avoided you because i was terrified of my own confusion. i felt like if i stayed close to you while my mind was such a mess, my chaotic energy and my growing feelings would eventually drag you down and hurt you.
+
+in my twisted logic, i convinced myself that pushing you away was an act of protection—that creating distance was the only way to shield you from my mess. i thought if i stayed away long enough, everything inside me would magically reset, and we could just go back to normal.
+
+but real feelings don't work like a light switch you can just turn off when it gets overwhelming.
+
+i never want you to think i avoided you out of anger, coldness, or because i stopped caring. it was never that. i was just scared, confused, and utterly foolish in how i handled my own heart. and i am so sorry for hurting you in the process of trying to figure myself out.
+
+***
+
+looking back at everything now with a clearer mind and a matured heart, there is so much i wish i had done differently.
+
+i wish i hadn't let myself become so distant and unreachable.
+i wish i had chosen to talk to you instead of vanishing into my own head.
+i wish i had trusted you enough to tell you when i was struggling, instead of putting this ridiculous burden on myself to solve everything alone.
+i wish i had given you the chance to understand what was going on inside me, instead of making the selfish decision for the both of us that walking away was the only answer.
+
+because maybe things would have still changed. maybe we still would have drifted eventually. but maybe... just maybe, they wouldn't have.
+
+and living with those endless "what ifs" is one of the heaviest things i carry: not knowing what could have been if i had just been brave enough to be honest with you from day one.
+
+i often find myself wondering how different our lives might look today if i had simply taken a deep breath, sat down with you, and talked—instead of running away from the very things i was afraid to face.
+
+but i know i can't turn back time. i can't travel back to that scared, foolish version of myself and force him to stay, to speak up, and to stop being so afraid of being vulnerable. all i can do now is take full ownership of my mistakes, understand why i made them, and make sure i learn from the pain i caused.
+
+if there is one life-changing lesson i learned from all of this heartbreak, it's that silence never protects the people you love. most of the time, silence just leaves them feeling broken and confused.
+
+i wish with all my heart i had realized that sooner.
+
+***
+
+so whatever happens after you finish reading these words, i want you to hear this loud and clear: i am not expecting, asking for, or forcing anything from you.
+
+i honestly don't know where the road leads for us after tonight. maybe one day, when enough time has passed and healed old wounds, we might find our way back to being friends again. maybe we'll just remain as two people who once shared a quiet, beautiful piece of their lives together. or maybe life will keep pulling us down completely separate paths.
+
+and as terrifying as that uncertainty used to feel, i am finally at peace with whatever comes next.
+
+no matter what the future holds, i just needed you to finally know the unedited, raw truth.
+
+you mattered to me.
+our friendship mattered to me more than words can measure.
+every single memory, laugh, and shared moment mattered to me.
+and even the parts that ended up hurting mattered—because they belonged to something that was undeniably real to me.
+
+i refuse to erase, regret, or look back with bitterness at what we had just because the ending was painful. some connections don't have to last forever to have been profoundly meaningful, and some people don't need to stay in your life until the end to change your world forever.
+
+and that is exactly who you are to me. you were the person who walked into my life, stood by my side through things i didn't think i had the strength to survive, became someone i cherished more than i knew how to say, and eventually became someone i had to learn how to let go of.
+
+i will always, always be deeply grateful that you existed in my life.
+
+thank you for staying when things were ridiculously hard.
+thank you for standing right beside me through the bullying, the self-doubt, and all the nonsense i was dealing with back then.
+thank you for simply being my friend when i needed one the most.
+
+and from the very bottom of my heart, i am so deeply sorry for all the times i made you feel like you didn't matter or that i didn't care—because the truth is, i cared so much it terrified me. i just lacked the maturity to handle everything i was feeling at the time.
+
+i don't expect this message to fix the past or magically bridge the distance between us. i just couldn't bear the thought of our story ending with all these unsaid words still trapped inside my soul.
+
+maybe this is my way of finding closure. maybe it's just me finally giving you the honesty and respect you deserved years ago.
+
+either way, i am genuinely so honored that i got to know you, and i am so proud that i once got to call you my friend.
+
+if you ever look back at everything we went through, i hope you don't just remember the cold silence at the end. i hope you remember that once upon a time, there was a friendship that i truly, deeply treasured with everything i had.
+
+because i really, really did.
+
+thank you for everything, sabrina. take care of yourself, always.
+      </div>
+    </div>
+  </div>
+
+  <!-- AUDIO ELEMENT (LOOPING DOROTHEA) -->
+  <audio id="bg-music" loop>
+    <source src="dorothea.mp3" type="audio/mpeg">
+  </audio>
+
+  <script>
+    function checkPassword() {
+      const pass = document.getElementById('pass-input').value.trim();
+      const passScreen = document.getElementById('password-screen');
+      const startScreen = document.getElementById('start-screen');
+      const errorMsg = document.getElementById('error-msg');
+
+      if (pass.toLowerCase() === "august") {
+        passScreen.style.setProperty('display', 'none', 'important');
+        startScreen.style.setProperty('display', 'flex', 'important');
+      } else {
+        errorMsg.innerText = "incorrect password, try again!";
+      }
+    }
+
+    function startExperience() {
+      const startScreen = document.getElementById('start-screen');
+      const mainContent = document.getElementById('main-content');
+      const audio = document.getElementById('bg-music');
+
+      startScreen.style.setProperty('display', 'none', 'important');
+      mainContent.style.setProperty('display', 'block', 'important');
+
+      audio.play().catch(e => console.log("Audio autoplay blocked or failed:", e));
+    }
+  </script>
+</body>
+  </html>
+
